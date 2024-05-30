@@ -14,9 +14,7 @@ class _LoginScreenState extends State<LoginScreen> {
       backgroundColor: Colors.blue,
       body: Stack(
         children: [
-         Container(
-          child(),
-         ),
+         
          
         ],
       ),
