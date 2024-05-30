@@ -12,7 +12,14 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return const Scaffold(
       backgroundColor: Colors.blue,
-      
+      body: Stack(
+        children: [
+         Container(
+          child(),
+         ),
+         
+        ],
+      ),
     );
   }
 }
