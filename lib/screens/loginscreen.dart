@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import  'fade_animation.dart';
+import 'package:finalproject/components/custom_widgets.dart';
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -55,7 +54,15 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ],
                 ),
-              ),     
+              ),
+              Padding(padding: EdgeInsets.all(12.0),
+              child: Form(child: Column(children: [
+                FadeAnimation( delay: 1,
+                child: CustomTextFormField(
+                  hinttext: 'Enter your Email',
+                   obsecuretext: false,))
+              ],),),
+              )     
           ],
         )),
       ),
