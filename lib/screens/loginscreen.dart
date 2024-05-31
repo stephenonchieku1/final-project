@@ -13,7 +13,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Colors.blue,
+     // backgroundColor: Colors.blue,
       body: SafeArea(
         child: Padding(
           padding:  EdgeInsets.all(10.0),
@@ -60,9 +60,32 @@ class _LoginScreenState extends State<LoginScreen> {
                 FadeAnimation( delay: 1,
                 child: CustomTextFormField(
                   hinttext: 'Enter your Email',
-                   obsecuretext: false,))
-              ],),),
-              )     
+                   obsecuretext: false,
+                   )
+                   ),
+                   SizedBox(
+                    height: 10,
+                   ),
+                   FadeAnimation(
+                    delay: 1,
+                    child: Align(
+                      alignment: Alignment.centerRight, 
+                       child: Text("Enter Password ?", 
+                       style:  TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w700,
+                        fontFamily: "Urbanist-SemiBold",
+                       )
+                       ), 
+                    )
+                    ),
+                    SizedBox(
+                    height: 10,
+                   ),
+              ],
+              ),
+              ),
+              ) 
           ],
         )),
       ),
