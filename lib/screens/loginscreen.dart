@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'fade_animation.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:finalproject/components/custom_widgets.dart';
 
 class LoginScreen extends StatefulWidget {
