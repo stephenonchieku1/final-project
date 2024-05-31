@@ -58,16 +58,33 @@ class _CustomElevatedButtonState extends State<CustomElevatedButton> {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: onPressed,
-       child: loading
-       ? const CupertinoActivityIndicator()
-       :FittedBox(
-        child: Text( widget.message,
-        style: const TextStyle(
-          fontSize: 15,
-          fontFamily: 'Urbanist-Medium',
-          color: Color(0xFF8391A1) 
-        ))
-       ));
+        onPressed: () async {
+          setState(() {
+            loading = true;
+          });
+          if (widget.function != null){
+            await widget.function();
+          }
+          setState(() {
+            loading = false;
+          });
+        },
+        style: ButtonStyle( 
+          side: const WidgetStatePropertyAll(
+            BorderSide(color: Colors.grey )),
+            shape: WidgetStatePropertyAll(
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+             fixedSize:  const WidgetStatePropertyAll(Size.fromWidth(370)),
+             padding: const WidgetStatePropertyAll(EdgeInsets.symmetric(vertical: 20)),
+             backgroundColor: WidgetStatePropertyAll(widget.color)
+        ),
+        child: loading
+            ? const CupertinoActivityIndicator()
+            : FittedBox(
+                child: Text(widget.message,
+                    style: const TextStyle(
+                        fontSize: 15,
+                        fontFamily: 'Urbanist-Medium',
+                        color: Color(0xFF8391A1)))));
   }
 }
