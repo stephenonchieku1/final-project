@@ -129,12 +129,12 @@ class _LoginScreenState extends State<LoginScreen> {
                const SizedBox(
                 height: 15,
               ),
-               const Padding(
-                padding: EdgeInsets.all(12.0),
+                Padding(
+                padding: const EdgeInsets.all(12.0),
                 child: SizedBox(
                   child: Column(
                    children: [
-                     FadeAnimation(
+                     const FadeAnimation(
                         delay: 2.2,
                         child: Text(
                           "Or Log With",
@@ -144,18 +144,24 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       FadeAnimation(
                          delay: 0,
-                        child: Padding(padding: EdgeInsets.only(
+                        child: Padding(padding: const EdgeInsets.only(
                           top:10, bottom: 10, right:30, left:30),
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                            children: [
-                           
+                           SvgPicture.asset(
+                                  "assets/images/facebook_ic (1).svg"),
+                              SvgPicture.asset("assets/images/google_ic-1.svg"),
+                              Image.asset(
+                                "assets/images/Vector.png",
+                                color: Colors.grey,
+                              )
                              
                            ],
                           ),
