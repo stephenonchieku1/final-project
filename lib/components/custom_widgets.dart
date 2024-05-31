@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextFormField extends StatefulWidget {
@@ -56,6 +57,17 @@ class _CustomElevatedButtonState extends State<CustomElevatedButton> {
   bool loading = false;
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return ElevatedButton(
+      onPressed: onPressed,
+       child: loading
+       ? const CupertinoActivityIndicator()
+       :FittedBox(
+        child: Text( widget.message,
+        style: const TextStyle(
+          fontSize: 15,
+          fontFamily: 'Urbanist-Medium',
+          color: Color(0xFF8391A1) 
+        ))
+       ));
   }
 }
