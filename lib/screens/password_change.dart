@@ -61,6 +61,63 @@ class _SignupPageState extends State<SignupPage> {
                   ],
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Form(
+                  child: Column(
+                    children: [
+                      const FadeAnimation(
+                        delay: 1.5,
+                        child: CustomTextFormField(
+                          hinttext: 'Username',
+                          obsecuretext: false,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      const FadeAnimation(
+                        delay: 1.8,
+                        child: CustomTextFormField(
+                          hinttext: 'Email',
+                          obsecuretext: false,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      const FadeAnimation(
+                        delay: 2.1,
+                        child: CustomTextFormField(
+                          hinttext: 'Password',
+                          obsecuretext: true,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      const FadeAnimation(
+                        delay: 2.4,
+                        child: CustomTextFormField(
+                          hinttext: 'Confirm password',
+                          obsecuretext: false,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      FadeAnimation(
+                        delay: 2.7,
+                        child: CustomElevatedButton(
+                          message: "Register",
+                          function: () {},
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
         ],
 
 
