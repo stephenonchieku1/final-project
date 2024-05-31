@@ -12,20 +12,20 @@ class _LoginScreenState extends State<LoginScreen> {
   bool flag = true;
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return  Scaffold(
      // backgroundColor: Colors.blue,
       body: SafeArea(
         child: Padding(
-          padding:  EdgeInsets.all(10.0),
+          padding:  const EdgeInsets.all(10.0),
           child: Column(
            mainAxisAlignment: MainAxisAlignment.spaceBetween,
            crossAxisAlignment: CrossAxisAlignment.start,
            children: [
-            FadeAnimation(
+            const FadeAnimation(
                delay:1,
                child: Text("clicked"),
                ),
-             Padding(
+             const Padding(
                 padding: EdgeInsets.all(12.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -55,18 +55,18 @@ class _LoginScreenState extends State<LoginScreen> {
                   ],
                 ),
               ),
-              Padding(padding: EdgeInsets.all(12.0),
+              Padding(padding: const EdgeInsets.all(12.0),
               child: Form(child: Column(children: [
-                FadeAnimation( delay: 1,
+                const FadeAnimation( delay: 1,
                 child: CustomTextFormField(
                   hinttext: 'Enter your Email',
                    obsecuretext: false,
                    )
                    ),
-                   SizedBox(
+                   const SizedBox(
                     height: 10,
                    ),
-                   FadeAnimation(
+                   const FadeAnimation(
                     delay: 1,
                     child: Align(
                       alignment: Alignment.centerRight, 
@@ -79,9 +79,27 @@ class _LoginScreenState extends State<LoginScreen> {
                        ), 
                     )
                     ),
-                    SizedBox(
+                    const SizedBox(
                     height: 10,
                    ),
+                   FadeAnimation(
+                     delay: 2.8,
+                    child: CustomElevatedButton(
+                      message: "login",
+                      function: () {
+                            if (flag) {
+                              setState(() {
+                                flag = false;
+                              });
+                            } else {
+                              setState(() {
+                                flag = true;
+                              });
+                            }
+                          },
+                        color: Colors.black,
+                       ),
+                    ),
               ],
               ),
               ),
