@@ -70,7 +70,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     delay: 1,
                     child: Align(
                       alignment: Alignment.centerRight, 
-                       child: Text("Enter Password ?", 
+                       child: Text("Forgot  Password ?", 
+                      
                        style:  TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.w700,
