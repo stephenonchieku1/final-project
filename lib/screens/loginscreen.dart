@@ -146,9 +146,53 @@ class _LoginScreenState extends State<LoginScreen> {
                       SizedBox(
                         height: 20,
                       ),
+                      FadeAnimation(
+                         delay: 0,
+                        child: Padding(padding: EdgeInsets.only(
+                          top:10, bottom: 10, right:30, left:30),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                           children: [
+                           
+                             
+                           ],
+                          ),
+                        ),)
 
                    ],
-                ),))
+                ),)),
+                FadeAnimation(
+                delay: 2.8,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 50),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      const Text(
+                        "Don’t have an account?",
+                        style: TextStyle(
+                           fontSize: 15,
+                            fontFamily: 'Urbanist-Medium', 
+                            color: Color(0xFF8391A1),
+                        ),
+                      ),
+                      TextButton(
+                          onPressed: () {
+                            
+                          },
+                          child: const Text(
+                            "Register Now",
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontFamily: "Urbanist-Bold",
+                              fontWeight: FontWeight.bold,
+                              color: Color.fromARGB(255, 72, 151, 151)),
+                          )),
+                    ],
+                  ),
+                ),
+              )
             ],
           ),
         ),
