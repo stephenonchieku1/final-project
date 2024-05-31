@@ -90,7 +90,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                     )),
                       ),
                     ),
-                 
+                 const SizedBox(
+                  height: 10,
+                 ),
               const FadeAnimation(
                   delay: 2.2,
                   child: Align(
@@ -126,6 +128,27 @@ class _LoginScreenState extends State<LoginScreen> {
                const SizedBox(
                 height: 15,
               ),
+               const Padding(
+                padding: EdgeInsets.all(12.0),
+                child: SizedBox(
+                  child: Column(
+                   children: [
+                     FadeAnimation(
+                        delay: 2.2,
+                        child: Text(
+                          "Or Log With",
+                          style: TextStyle(
+                            fontFamily: 'Urbanist-semibold',
+                            fontSize: 15
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+
+                   ],
+                ),))
             ],
           ),
         ),
