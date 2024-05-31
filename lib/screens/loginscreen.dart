@@ -59,7 +59,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Form(
                       child: Column(children: [
                     const FadeAnimation(
-                        delay: 1,
+                        delay: 1.9,
                         child: CustomTextFormField(
                           hinttext: 'Enter your Email',
                           obsecuretext: false,
@@ -68,7 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: 10,
                     ),
                     FadeAnimation(
-                      delay: 0,
+                      delay: 2.2,
                       child: TextFormField(
                         obscureText: flag ? true : false,
                         decoration: InputDecoration(
@@ -86,10 +86,11 @@ class _LoginScreenState extends State<LoginScreen> {
                             suffixIcon: IconButton(
                                 onPressed: () {},
                                 icon:
-                                    const Icon(Icons.remove_red_eye_outlined))),
+                                    const Icon(Icons.remove_red_eye_outlined)
+                                    )),
                       ),
-                    )
-                  ]))),
+                    ),
+                 
               const FadeAnimation(
                   delay: 2.2,
                   child: Align(
@@ -128,7 +129,8 @@ class _LoginScreenState extends State<LoginScreen> {
             ],
           ),
         ),
+          )]
       ),
-    );
+    )));
   }
 }
