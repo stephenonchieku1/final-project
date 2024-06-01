@@ -12,11 +12,11 @@ class PasswordChange extends StatefulWidget {
 class _PasswordChangeState extends State<PasswordChange> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SafeArea(child: Column(
         children: [
           //LottieBuilder.asset("assests/images/ticker.json"),
-          const FadeAnimation(
+          FadeAnimation(
              delay: 0,
             child: Text(            
             'password has been changed !!',
@@ -27,6 +27,17 @@ class _PasswordChangeState extends State<PasswordChange> {
             )
             ),
           ),
+            SizedBox(height: 20,),
+            FadeAnimation(
+               delay:0,
+               child: Text('Password has been changed successfully',
+                    style: TextStyle(
+                      fontSize: 20,
+                        fontFamily: 'Urbanist-Bold',
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black 
+            ),),)
+
         ],
       )),
     );
