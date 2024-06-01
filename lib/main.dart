@@ -1,7 +1,5 @@
 import 'package:finalproject/screens/password_change.dart';
 import 'package:flutter/material.dart';
-import 'screens/loginscreen.dart';
-import "screens/signup_page.dart";
 
 void main() {
   runApp(const MyApp());
