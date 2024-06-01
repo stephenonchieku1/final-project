@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class PasswordChange extends StatefulWidget {
   const PasswordChange({super.key});
@@ -11,6 +12,12 @@ class PasswordChange extends StatefulWidget {
 class _PasswordChangeState extends State<PasswordChange> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: SafeArea(child: Column(
+        children: [
+          LottieBuilder.asset("assests/images/ticker.json"),
+        ],
+      )),
+    );
   }
 }
