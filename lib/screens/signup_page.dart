@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -16,6 +15,7 @@ class _PasswordChangeState extends State<PasswordChange> {
       body: SafeArea(child: Column(
         children: [
           LottieBuilder.asset("assests/images/ticker.json"),
+          
         ],
       )),
     );
