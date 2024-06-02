@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1032836079458",
+    "project_id": "healthlink-caa0c",
+    "storage_bucket": "healthlink-caa0c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1032836079458:android:1e8d26c091160ee56cd63b",
+        "android_client_info": {
+          "package_name": "com.onchieku.finalproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSUSY3xKrSKYHo6Z81Oitvv3lKJ4OfLZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
