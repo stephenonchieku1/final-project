@@ -1,8 +1,9 @@
 import 'package:finalproject/components/custom_widgets.dart';
 import 'package:finalproject/screens/fade_animation.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
-
+import 'package:finalproject/router/router.dart';
 class PasswordChange extends StatefulWidget {
   const PasswordChange({super.key});
 
@@ -47,7 +48,9 @@ class _PasswordChangeState extends State<PasswordChange> {
       delay: 1,
       child: CustomElevatedButton(
         message: "Back to Login Page", 
-      function:(){},
+      function:(){
+        GoRouter.of(context).pushReplacement(Routers.loginpage.name)
+      },
        color: Colors.black,
        ),
         ),
