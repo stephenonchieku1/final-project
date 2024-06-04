@@ -17,23 +17,19 @@ class _ForgetPasswordState extends State<ForgetPassword> {
     return  Scaffold(
       body: SafeArea(
           child: Padding(
-              padding: EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(10.0),
               child: Column(
                 children: [
                   Padding(
-                    padding: EdgeInsets.all(12.0),
+                    padding:  const EdgeInsets.all(12.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const FadeAnimation(
+                        FadeAnimation(
                           delay: 1,
                           child: Text(
                             "Forgot Password",
-                            style: TextStyle(
-                              fontSize: 30,
-                              fontFamily: "Urbanist",
-                              fontWeight: FontWeight.bold,
-                            ),
+                            style: Styles().titelTheme,
                           ),
                         ),
                         FadeAnimation(
