@@ -73,7 +73,31 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                   ),
                 ),
               ),
-
+               const Spacer(),
+              FadeAnimation(
+                delay: 2.4,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 50),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Don’t have an account?",
+                        style: Styles().hintText,
+                      ),
+                      TextButton(
+                          onPressed: () {
+                            GoRouter.of(context)
+                                .pushNamed(Routers.signuppage.name);
+                          },
+                          child: Text(
+                            "Register Now",
+                            style: Styles().mediumTheme,
+                          )),
+                    ],
+                  ),
+                ),
+              )
                 ],
               ))),
     );
