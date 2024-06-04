@@ -8,6 +8,7 @@ class AppRouter {
   });
 }
 class Routers {
+  static AppRouter registration = AppRouter(name: "/", path: "/");
     static AppRouter loginpage =AppRouter(name: "/login", path: "/login");
      static AppRouter signup =AppRouter(name: "/signup", path: "/signup");
 static AppRouter newpassword =
@@ -16,5 +17,6 @@ static AppRouter otpverification =
       AppRouter(name: "/otpverification", path: "/otpverification");
 static AppRouter passwordchanges =
       AppRouter(name: "/passwordchanges", path: "/passwordchanges");
-
+ static AppRouter forgetpassword =
+      AppRouter(name: "/forgetpassword", path: "/forgetpassword");
 }
