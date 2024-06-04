@@ -1,6 +1,7 @@
 import 'package:finalproject/screens/fade_animation.dart';
 import 'package:finalproject/styles/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 import 'package:finalproject/router/router.dart';
 import 'package:finalproject/components/custom_widgets.dart';
@@ -21,6 +22,18 @@ class _ForgetPasswordState extends State<ForgetPassword> {
               padding: const EdgeInsets.all(10.0),
               child: Column(
                 children: [
+                FadeAnimation(
+                delay: 1,
+                child: IconButton(
+                    onPressed: () {
+                      GoRouter.of(context).pop();
+                    },
+                    icon: const Icon(
+                      CupertinoIcons.back,
+                      size: 35,
+                    )),
+              ),
+
                   Padding(
                     padding:  const EdgeInsets.all(12.0),
                     child: Column(
