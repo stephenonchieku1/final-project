@@ -9,11 +9,12 @@ class AppRouter {
 }
 class Routers {
     static AppRouter loginpage =AppRouter(name: "/login", path: "/login");
-     static AppRouter signuppage =AppRouter(name: "/signup", path: "/signup");
+     static AppRouter signup =AppRouter(name: "/signup", path: "/signup");
 static AppRouter newpassword =
       AppRouter(name: "/newpassword", path: "/newpassword");
 static AppRouter otpverification =
       AppRouter(name: "/otpverification", path: "/otpverification");
-
+static AppRouter passwordchanges =
+      AppRouter(name: "/passwordchanges", path: "/passwordchanges");
 
 }
