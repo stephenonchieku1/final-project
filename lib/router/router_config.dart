@@ -1,4 +1,5 @@
 import 'package:finalproject/screens/loginscreen.dart';
+import 'package:finalproject/screens/password_change.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 import 'package:finalproject/router/router.dart';
@@ -14,7 +15,13 @@ import 'package:finalproject/router/router.dart';
           return const CupertinoPage(child: LoginScreen());
         },
       ),
-
+  GoRoute(
+    path: Routers.signup.path,
+    name: Routers.signup.name,
+    pageBuilder: (context, state) {
+      return const CupertinoPage(child: SignupPage());
+    },
+  ),
 
 
     ]
