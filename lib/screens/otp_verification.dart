@@ -146,7 +146,7 @@ class _OtpVerificationState extends State<OtpVerification> {
                       TextButton(
                           onPressed: () {
                             GoRouter.of(context)
-                                .pushNamed(Routers.signuppage.name);
+                                .pushNamed(Routers.signup.name);
                           },
                           child: const Text(
                             "Register Now",
