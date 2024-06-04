@@ -105,16 +105,21 @@ class _LoginScreenState extends State<LoginScreen> {
                     const SizedBox(
                       height: 10,
                     ),
-                    const FadeAnimation(
+                     FadeAnimation(
                         delay: 2.2,
                         child: Align(
                           alignment: Alignment.centerRight,
-                          child: Text("Forgot  Password ?",
+                           child: GestureDetector(
+                                onTap: () {
+                                  GoRouter.of(context)
+                                      .pushNamed(Routers.forgetpassword.name);
+                                },
+                          child: const Text("Forgot  Password ?",
                               style: TextStyle(
                                 fontSize: 15,
                                 fontWeight: FontWeight.w700,
                                 fontFamily: "Urbanist-SemiBold",
-                              )),
+                             )  )),
                         )),
                     const SizedBox(
                       height: 10,
