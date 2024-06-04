@@ -1,10 +1,12 @@
 import 'package:finalproject/screens/loginscreen.dart';
+import 'package:finalproject/screens/new_password.dart';
+import 'package:finalproject/screens/otp_verification.dart';
 import 'package:finalproject/screens/password_change.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
+import 'package:finalproject/screens/signup_page.dart';
 import 'package:finalproject/router/router.dart';
-
-
+import 'package:finalproject/screens/forget_password.dart';
 
   final router = GoRouter(
     routes: [
@@ -22,7 +24,33 @@ import 'package:finalproject/router/router.dart';
       return const CupertinoPage(child: SignupPage());
     },
   ),
-
-
+ GoRoute(
+    path: Routers.forgetpassword.path,
+    name: Routers.forgetpassword.name,
+    pageBuilder: (context, state) {
+      return const CupertinoPage(child: ForgetPassword());
+    },
+  ),
+GoRoute(
+    path: Routers.newpassword.path,
+    name: Routers.newpassword.name,
+    pageBuilder: (context, state) {
+      return const CupertinoPage(child: NewPassword());
+    },
+  ),
+  GoRoute(
+    path: Routers.otpverification.path,
+    name: Routers.otpverification.name,
+    pageBuilder: (context, state) {
+      return const CupertinoPage(child: OtpVerification());
+    },
+  ),
+  GoRoute(
+    path: Routers.passwordchanges.path,
+    name: Routers.passwordchanges.name,
+    pageBuilder: (context, state) {
+      return const CupertinoPage(child: PasswordChange());
+    },
+  )
     ]
   );
