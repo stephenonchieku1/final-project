@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
 
-class MyWidget extends StatefulWidget {
-  const MyWidget({super.key});
+class ForgetPassword extends StatefulWidget {
+  const ForgetPassword({super.key});
 
   @override
-  State<MyWidget> createState() => _MyWidgetState();
+  State<ForgetPassword> createState() => _ForgetPasswordState();
 }
 
-class _MyWidgetState extends State<MyWidget> {
+class _ForgetPasswordState extends State<ForgetPassword> {
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
