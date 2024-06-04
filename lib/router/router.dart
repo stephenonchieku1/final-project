@@ -12,7 +12,8 @@ class Routers {
      static AppRouter signuppage =AppRouter(name: "/signup", path: "/signup");
 static AppRouter newpassword =
       AppRouter(name: "/newpassword", path: "/newpassword");
-
+static AppRouter otpverification =
+      AppRouter(name: "/otpverification", path: "/otpverification");
 
 
 }
