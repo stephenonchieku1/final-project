@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'fade_animation.dart';
@@ -25,10 +26,18 @@ class _LoginScreenState extends State<LoginScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const FadeAnimation(
-              delay: 1,
-              child: Text("clicked"),
-            ),
+            FadeAnimation(
+                delay: 1,
+                child: IconButton(
+                    onPressed: () {
+                      GoRouter.of(context)
+                          .pushNamed(Routers.registration.name);
+                    },
+                    icon: const Icon(
+                      CupertinoIcons.back,
+                      size: 35,
+                    )),
+              ),
             const Padding(
               padding: EdgeInsets.all(12.0),
               child: Column(
