@@ -101,7 +101,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                       TextButton(
                           onPressed: () {
                             GoRouter.of(context)
-                                .pushNamed(Routers.signuppage.name);
+                                .pushNamed(Routers.signup.name);
                           },
                           child: Text(
                             "Register Now",
