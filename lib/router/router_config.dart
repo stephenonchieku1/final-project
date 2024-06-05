@@ -7,9 +7,17 @@ import 'package:go_router/go_router.dart';
 import 'package:finalproject/screens/signup_page.dart';
 import 'package:finalproject/router/router.dart';
 import 'package:finalproject/screens/forget_password.dart';
+import 'package:finalproject/screens/registration.dart';
 
   final router = GoRouter(
     routes: [
+      GoRoute(
+    path: Routers.registration.path,
+    name: Routers.registration.name,
+    pageBuilder: (context, state) {
+      return const CupertinoPage(child: Registration());
+    },
+  ),
       GoRoute(
         path: Routers.loginpage.path,
         name: Routers.loginpage.name,
