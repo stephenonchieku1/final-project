@@ -1,3 +1,5 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 class AppRouter {
 
   String name;
@@ -19,4 +21,8 @@ static AppRouter passwordchanges =
       AppRouter(name: "/passwordchanges", path: "/passwordchanges");
  static AppRouter forgetpassword =
       AppRouter(name: "/forgetpassword", path: "/forgetpassword");
+
+static AppRouter    trialpage = AppRouter( name: "/trialpage", path: "/trialpage")
+;
+
 }
