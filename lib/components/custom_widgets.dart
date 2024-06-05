@@ -1,6 +1,8 @@
 import 'dart:async';
 
+import 'package:finalproject/styles/styles.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextFormField extends StatefulWidget {
@@ -84,5 +86,77 @@ class _CustomElevatedButtonState extends State<CustomElevatedButton> {
                         fontSize: 15,
                         fontFamily: 'Urbanist-Medium',
                         color: Color(0xFF8391A1)))));
+  }
+}
+class DynamicFilledButton extends StatefulWidget {
+  const DynamicFilledButton(
+      {super.key, required this.child, required this.onPressed, this.color});
+
+  final Widget child;
+  // final VoidCallback onPressed;
+  final Color? color;
+  final FutureOr<void> Function() onPressed;
+
+  @override
+  State<DynamicFilledButton> createState() => _DynamicFilledButtonState();
+}
+
+class _DynamicFilledButtonState extends State<DynamicFilledButton> {
+  bool isLoading = false;
+
+  func() async {
+    FocusManager.instance.primaryFocus?.unfocus();
+
+    setState(() {
+      isLoading = true;
+    });
+
+    await widget.onPressed();
+
+    setState(() {
+      isLoading = false;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (defaultTargetPlatform == TargetPlatform.iOS) {
+      return FractionallySizedBox(
+        widthFactor: .8,
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(10),
+          child: CupertinoButton(
+            padding: const EdgeInsets.symmetric(
+              vertical: 10,
+            ),
+            color: widget.color ?? Styles().black,
+            onPressed: isLoading ? null : func,
+            child:
+                isLoading ? const CupertinoActivityIndicator() : widget.child,
+          ),
+        ),
+      );
+    }
+    return FractionallySizedBox(
+      widthFactor: .8,
+      child: SizedBox(
+        height: 48,
+        child: FilledButton(
+          style: FilledButton.styleFrom(
+            backgroundColor: widget.color ?? Styles().maincolor,
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+          ),
+          onPressed: isLoading ? null : func,
+          child: isLoading
+              ? const SizedBox(
+                  width: 30,
+                  height: 30,
+                  child: CircularProgressIndicator(),
+                )
+              : widget.child,
+        ),
+      ),
+    );
   }
 }
