@@ -120,7 +120,23 @@ class _LoginScreenState extends State<LoginScreen> {
                                 fontWeight: FontWeight.w700,
                                 fontFamily: "Urbanist-SemiBold",
                              )  )),
-                        )),
+                        )), 
+                            const SizedBox(
+                              height: 10,
+                            ),
+                     FadeAnimation(
+                      delay: 2.8,
+                      child: CustomElevatedButton(
+                        message: "trialpage",
+                        function:
+                        (){
+                           GoRouter.of(context)
+                           .pushNamed((Routers.trialpage.name));
+                        } ,
+                        color: Colors.black,
+                      ),
+                    ),
+
                     const SizedBox(
                       height: 10,
                     ),
@@ -188,6 +204,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             ],
                           ),
                         )),
+
                     FadeAnimation(
                       delay: 2.8,
                       child: Padding(
@@ -203,6 +220,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 color: Color(0xFF8391A1),
                               ),
                             ),
+                            
                             TextButton(
                                 onPressed: () {
                                   GoRouter.of(context)
