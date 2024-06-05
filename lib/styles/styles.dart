@@ -20,4 +20,9 @@ class Styles {
       fontWeight: FontWeight.bold,
       color: Color.fromARGB(255, 72, 151, 151)
       );
+
+   Color maincolor = const Color(0xFF35C2C1);
+  Color white = const Color(0xFFF5F5F5);
+  Color black = const Color(0xFF1E232C);
+
 }
