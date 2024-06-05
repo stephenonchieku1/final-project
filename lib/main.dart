@@ -1,4 +1,4 @@
-import 'package:finalproject/screens/loginscreen.dart';
+import 'package:finalproject/router/router_config.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,12 +10,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+    return MaterialApp.router(
+      theme: ThemeData(
+          brightness: Brightness.light,
           useMaterial3: true,
-        ),
-        home: const LoginScreen());
+          primaryColor: const Color(0xFF35C2C1),
+          textTheme: Typography.blackCupertino),
+      themeMode: ThemeMode.system,
+      darkTheme: ThemeData.dark(useMaterial3: true),
+      debugShowCheckedModeBanner: false,
+      routeInformationParser: router.routeInformationParser,
+      routeInformationProvider: router.routeInformationProvider,
+      routerDelegate: router.routerDelegate,
+    );
   }
 }
