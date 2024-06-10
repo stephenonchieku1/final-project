@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:finalproject/models/trialpage.dart';
 import 'package:finalproject/service/trialpage.dart';
+import 'package:finalproject/screens/appointmentscreen.dart';
 class Trialpage extends StatefulWidget {
   const Trialpage({super.key});
 
@@ -12,9 +13,8 @@ class _TrialpageState extends State<Trialpage> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Colors.white,
-      appBar: ,
-      body:SafeArea(child: Text('homepage'))
+      backgroundColor: Colors.white,     
+      body:SafeArea(child: AppointmentScreen()  )
       );
   }
 }
