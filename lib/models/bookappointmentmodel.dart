@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class BookAppointmentModel {
+class MLBookAppointmentData {
   String? id;
   String? title;
   Widget? widget;
   double? progress;
 
-  BookAppointmentModel({this.id, this.title, this.widget, this.progress});
+  MLBookAppointmentData({this.id, this.title, this.widget, this.progress});
 }
