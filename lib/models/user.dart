@@ -1,19 +1,18 @@
 
 class User {
   final int? id;
-  final String email;
-  final String firstName;
-  final String lastName;
+  final String email;i have  final String name;
+  
 
-  User({this.id, required this.email, required this.firstName, required this.lastName});
+  User({this.id, required this.email, required this.name});
 
   // Convert a User object into a Map object
   Map<String, dynamic> toMap() {
     return {
       'id': id,
       'email': email,
-      'first_name': firstName,
-      'last_name': lastName,
+      'name': name,
+      
     };
   }
 
@@ -22,8 +21,8 @@ class User {
     return User(
       id: map['id'],
       email: map['email'],
-      firstName: map['first_name'],
-      lastName: map['last_name'],
+      name: map['name'],
+     
     );
   }
 }
