@@ -57,7 +57,7 @@ List<MLServicesData> mlServiceDataList() {
       title: 'Clinic Visit',
       icon: Icons.home_work_outlined,
       image: ml_ic_dashClinicVisit!,
-      widget: MLBookAppointmentScreen(index: 0)));
+      widget: const MLBookAppointmentScreen(index: 0)));
   list.add(MLServicesData(
       title: 'Home Visit',
       icon: Icons.home,
