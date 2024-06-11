@@ -3,21 +3,21 @@ import 'package:nb_utils/nb_utils.dart';
 import 'package:finalproject/models/bookappointmentmodel.dart';
 import 'package:finalproject/utils/common.dart';
 import 'package:finalproject/styles/styles.dart';
+import 'package:finalproject/utils/dataprovider.dart';
 
-class BookAppoinmentScreen extends StatefulWidget {
-   static String tag = '/BookAppointmentScreen';
+class MLBookAppointmentScreen extends StatefulWidget {
+  static String tag = '/MLBookAppointmentScreen';
   final int? index;
 
-
-  const BookAppoinmentScreen({super.key,this.index});
+  const MLBookAppointmentScreen({super.key, this.index});
 
   @override
-  State<BookAppoinmentScreen> createState() => _BookAppoinmentScreenState();
+  State<MLBookAppointmentScreen> createState() => _MLBookAppointmentScreenState();
 }
 
-class _BookAppoinmentScreenState extends State<BookAppoinmentScreen> {
-int currentWidget = 0;
-  List<BookAppointmentModel> data = BookAppointmentModelList();
+class _MLBookAppointmentScreenState extends State<MLBookAppointmentScreen> {
+  int currentWidget = 0;
+  List<MLBookAppointmentData> data = mlBookAppointmentDataList();
 
   @override
   void initState() {
@@ -55,9 +55,9 @@ int currentWidget = 0;
           if (navigatorKey.currentState!.canPop()) {
             currentWidget--;
             setState(() {});
-            navigatorKey.currentState!.pop();            
-          }        
-        }    
+            navigatorKey.currentState!.pop();
+          }
+        }
       },
       child: Scaffold(
         body: SafeArea(
@@ -104,7 +104,8 @@ int currentWidget = 0;
                                 style: boldTextStyle(color: Colors.grey)),
                           ],
                         ).expand(flex: 8),
-                        const Icon(Icons.home_outlined, color: blackColor, size: 24)
+                        const Icon(Icons.home_outlined,
+                                color: blackColor, size: 24)
                             .expand(flex: 1),
                       ],
                     ).paddingAll(16.0),
@@ -112,8 +113,7 @@ int currentWidget = 0;
                     LinearProgressIndicator(
                       minHeight: 2.0,
                       backgroundColor: colorLightGrey,
-                      valueColor:
-                          AlwaysStoppedAnimation<Color>(colorDarkBlue),
+                      valueColor: AlwaysStoppedAnimation<Color>(colorDarkBlue),
                       value: progress,
                     ),
                     8.height,
@@ -130,7 +130,8 @@ int currentWidget = 0;
                   children: [
                     Text("Continue", style: boldTextStyle(color: white)),
                     8.width,
-                    const Icon(Icons.arrow_forward_ios, color: whiteColor, size: 12),
+                    const Icon(Icons.arrow_forward_ios,
+                        color: whiteColor, size: 12),
                   ],
                 ),
                 onTap: () {
@@ -158,5 +159,3 @@ int currentWidget = 0;
     );
   }
 }
-
-
