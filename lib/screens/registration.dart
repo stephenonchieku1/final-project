@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'fade_animation.dart';
 
-
 class Registration extends StatefulWidget {
   const Registration({super.key});
 
@@ -17,16 +16,27 @@ class _RegistrationState extends State<Registration> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            GoRouter.of(context).pushNamed(Routers.loginpage.name);
+          },
+        ),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+      ),
       body: Stack(
         children: [
           SizedBox(
-              height: MediaQuery.of(context).size.height ,
-              width: MediaQuery.of(context).size.width,
-              child: Image.asset(
-                "assets/images/img.png",
-                filterQuality: FilterQuality.high,
-                fit: BoxFit.cover,
-              )),
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            child: Image.asset(
+              "assets/images/img.png",
+              filterQuality: FilterQuality.high,
+              fit: BoxFit.cover,
+            ),
+          ),
           Positioned(
             bottom: 20,
             left: 20,
@@ -40,10 +50,12 @@ class _RegistrationState extends State<Registration> {
                       height: 60,
                       width: 60,
                       decoration: const BoxDecoration(
-                          shape: BoxShape.circle,
-                          image: DecorationImage(
-                              image: AssetImage(
-                                  "assets/images/main logo light color.png"))),
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                          image: AssetImage(
+                              "assets/images/main logo light color.png"),
+                        ),
+                      ),
                     ),
                   ),
                   const FadeAnimation(
@@ -51,10 +63,11 @@ class _RegistrationState extends State<Registration> {
                     child: Text(
                       "Flutter Spirit ❤️",
                       style: TextStyle(
-                          fontSize: 30,
-                          fontFamily: "Urbanist",
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black),
+                        fontSize: 30,
+                        fontFamily: "Urbanist",
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
                     ),
                   ),
                   const SizedBox(
@@ -76,31 +89,38 @@ class _RegistrationState extends State<Registration> {
                   FadeAnimation(
                     delay: 2.5,
                     child: ElevatedButton(
-                        onPressed: () {
-                          GoRouter.of(context)
-                              .pushNamed(Routers.signup.name);
-                        },
-                        style: ButtonStyle(
-                            side: const WidgetStatePropertyAll(
-                                BorderSide(color: Colors.black)),
-                            shape: WidgetStatePropertyAll(
-                                RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10))),
-                            fixedSize: const WidgetStatePropertyAll(
-                                Size.fromWidth(370)),
-                            padding: const WidgetStatePropertyAll(
-                              EdgeInsets.symmetric(vertical: 20),
-                            ),
-                            backgroundColor:
-                                const WidgetStatePropertyAll(Colors.white)),
-                        child: const Text(
-                          "Register",
-                          style: TextStyle(
-                              fontSize: 15,
-                              fontFamily: "Urbanist-SemiBold",
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black),
-                        )),
+                      onPressed: () {
+                        GoRouter.of(context).pushNamed(Routers.signup.name);
+                      },
+                      style: ButtonStyle(
+                        side: const MaterialStatePropertyAll(
+                          BorderSide(color: Colors.black),
+                        ),
+                        shape: MaterialStatePropertyAll(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
+                        fixedSize: const MaterialStatePropertyAll(
+                          Size.fromWidth(370),
+                        ),
+                        padding: const MaterialStatePropertyAll(
+                          EdgeInsets.symmetric(vertical: 20),
+                        ),
+                        backgroundColor: const MaterialStatePropertyAll(
+                          Colors.white,
+                        ),
+                      ),
+                      child: const Text(
+                        "Register",
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontFamily: "Urbanist-SemiBold",
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
                   ),
                   const SizedBox(
                     height: 50,
@@ -109,8 +129,10 @@ class _RegistrationState extends State<Registration> {
                     delay: 2.5,
                     child: TextButton(
                       onPressed: () {},
-                      child: Text("Continue as guest",
-                          style: Styles().mediumTheme),
+                      child: Text(
+                        "Continue as guest",
+                        style: Styles().mediumTheme,
+                      ),
                     ),
                   ),
                   const SizedBox(
