@@ -1,7 +1,8 @@
 
 class User {
   final int? id;
-  final String email;i have  final String name;
+  final String email;
+  final String name;
   
 
   User({this.id, required this.email, required this.name});
