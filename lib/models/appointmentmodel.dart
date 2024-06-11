@@ -1,4 +1,4 @@
-class AppointmentModel{
+class MLAppointmentData {
   String? service;
   String? date;
   String? month;
@@ -6,11 +6,5 @@ class AppointmentModel{
   String? patient;
   String? department;
 
-AppointmentModel({this.service, 
-this.date,
- this.month, 
- this.doctor, 
- this.patient,
-  this.department
-  });
+  MLAppointmentData({this.service, this.date, this.month, this.doctor, this.patient, this.department});
 }
