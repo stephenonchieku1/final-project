@@ -83,7 +83,7 @@ class AppointmentDetailListState extends State<AppointmentDetailList> {
             mOption('Service'),
             4.height,
             Text(
-              'Endocrinology -' + topHospitalList[0].fees.validate(),
+              'Endocrinology -${topHospitalList[0].fees.validate()}',
               style: primaryTextStyle(color: colorDarkBlue),
             ).paddingLeft(18.0),
             16.height,
@@ -94,7 +94,7 @@ class AppointmentDetailListState extends State<AppointmentDetailList> {
                   decoration: boxDecorationWithRoundedCorners(
                       backgroundColor: colorCyan, borderRadius: radius(12)),
                   child:
-                      Image.asset(ml_ic_doctor_image!, height: 50, width: 50),
+                      Image.asset(ml_ic_doctor_image, height: 50, width: 50),
                 ),
                 8.width,
                 Column(
@@ -117,7 +117,7 @@ class AppointmentDetailListState extends State<AppointmentDetailList> {
                   padding: const EdgeInsets.only(top: 4.0),
                   decoration: boxDecorationWithRoundedCorners(
                       borderRadius: radius(12), backgroundColor: colorCyan),
-                  child: Image.asset(ml_ic_profile_picture!,
+                  child: Image.asset(ml_ic_profile_picture,
                       height: 50, width: 50),
                 ),
                 8.width,
