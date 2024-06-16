@@ -9,32 +9,30 @@ import 'package:finalproject/router/router.dart';
 import 'package:finalproject/screens/forget_password.dart';
 import 'package:finalproject/screens/registration.dart';
 import 'package:finalproject/screens/trialpage.dart';
+import 'package:finalproject/screens/MLDashboardScreen.dart';
 
-  final router = GoRouter(
-    routes: [
-      GoRoute(
+final router = GoRouter(routes: [
+  GoRoute(
     path: Routers.registration.path,
     name: Routers.registration.name,
     pageBuilder: (context, state) {
       return const CupertinoPage(child: Registration());
     },
   ),
-  
-      GoRoute(
-        path: Routers.trialpage.path,
-        name: Routers.trialpage.name,
-        pageBuilder: (contect, state){
-          return const CupertinoPage(child: Trialpage());
-        },
-      ),
-
-      GoRoute(
-        path: Routers.loginpage.path,
-        name: Routers.loginpage.name,
-        pageBuilder: (contect, state){
-          return const CupertinoPage(child: LoginScreen());
-        },
-      ),
+  GoRoute(
+    path: Routers.trialpage.path,
+    name: Routers.trialpage.name,
+    pageBuilder: (contect, state) {
+      return const CupertinoPage(child: Trialpage());
+    },
+  ),
+  GoRoute(
+    path: Routers.loginpage.path,
+    name: Routers.loginpage.name,
+    pageBuilder: (contect, state) {
+      return const CupertinoPage(child: LoginScreen());
+    },
+  ),
   GoRoute(
     path: Routers.signup.path,
     name: Routers.signup.name,
@@ -42,14 +40,14 @@ import 'package:finalproject/screens/trialpage.dart';
       return const CupertinoPage(child: SignupPage());
     },
   ),
- GoRoute(
+  GoRoute(
     path: Routers.forgetpassword.path,
     name: Routers.forgetpassword.name,
     pageBuilder: (context, state) {
       return const CupertinoPage(child: ForgetPassword());
     },
   ),
-GoRoute(
+  GoRoute(
     path: Routers.newpassword.path,
     name: Routers.newpassword.name,
     pageBuilder: (context, state) {
@@ -69,6 +67,12 @@ GoRoute(
     pageBuilder: (context, state) {
       return const CupertinoPage(child: PasswordChange());
     },
+  ),
+  GoRoute(
+    path: Routers.dashboardscreen.path,
+    name: Routers.dashboardscreen.name,
+    pageBuilder: (context, state) {
+      return const CupertinoPage(child: MLDashboardScreen());
+    },
   )
-    ]
-  );
+]);
