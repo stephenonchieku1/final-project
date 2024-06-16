@@ -19,8 +19,10 @@ static AppRouter passwordchanges =
       AppRouter(name: "/passwordchanges", path: "/passwordchanges");
  static AppRouter forgetpassword =
       AppRouter(name: "/forgetpassword", path: "/forgetpassword");
-
+static AppRouter homepage =
+      AppRouter(name: "/homepage", path: "/homepage");
 static AppRouter    trialpage = AppRouter( name: "/trialpage", path: "/trialpage")
 ;
-
+static AppRouter   dashboardscreen = AppRouter( name: "/dashboardscreen", path: "/dashboardscreen")
+;
 }
