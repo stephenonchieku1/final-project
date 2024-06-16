@@ -1,7 +1,13 @@
 import 'package:finalproject/router/router_config.dart';
 import 'package:flutter/material.dart';
-
-void main() {
+import 'package:sqflite_common_ffi/sqflite_ffi.dart';
+void main()async {
+  sqfliteFfiInit();
+  databaseFactory = databaseFactoryFfi;
+  WidgetsFlutterBinding.ensureInitialized();
+ 
+  
+ 
   runApp(const MyApp());
 }
 
