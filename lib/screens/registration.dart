@@ -49,7 +49,7 @@ class _RegistrationState extends State<Registration> {
                   const FadeAnimation(
                     delay: 1.5,
                     child: Text(
-                      "Flutter Spirit ❤️",
+                      "Health Link ❤️",
                       style: TextStyle(
                           fontSize: 30,
                           fontFamily: "Urbanist",
@@ -108,7 +108,10 @@ class _RegistrationState extends State<Registration> {
                   FadeAnimation(
                     delay: 2.5,
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        GoRouter.of(context)
+                           .pushNamed((Routers.dashboardscreen.name));
+                      },
                       child: Text("Continue as guest",
                           style: Styles().mediumTheme),
                     ),
