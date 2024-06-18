@@ -18,7 +18,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        // backgroundColor: Colors.blue,
+         backgroundColor: Colors.white,
         body: SafeArea(
             child: Padding(
       padding: const EdgeInsets.all(10.0),
@@ -131,7 +131,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         function:
                         (){
                            GoRouter.of(context)
-                           .pushNamed((Routers.trialpage.name));
+                           .pushNamed((Routers.dashboardscreen.name));
                         } ,
                         color: Colors.black,
                       ),
