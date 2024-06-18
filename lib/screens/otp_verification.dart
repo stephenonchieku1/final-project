@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:finalproject/components/custom_widgets.dart';
 import 'fade_animation.dart';
@@ -106,7 +107,9 @@ class _OtpVerificationState extends State<OtpVerification> {
                               PinputAutovalidateMode.onSubmit,
                           showCursor: true,
                           onCompleted: (pin) {
-                            print(pin);
+                            if (kDebugMode) {
+                              print(pin);
+                            }
                           },
                         ),
                       ),

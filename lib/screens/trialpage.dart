@@ -1,7 +1,5 @@
+import 'package:finalproject/Appointment/appointmentform.dart';
 import 'package:flutter/material.dart';
-import 'package:finalproject/models/trialpage.dart';
-import 'package:finalproject/service/trialpage.dart';
-import 'package:finalproject/screens/appointmentscreen.dart';
 class Trialpage extends StatefulWidget {
   const Trialpage({super.key});
 
@@ -14,7 +12,7 @@ class _TrialpageState extends State<Trialpage> {
   Widget build(BuildContext context) {
     return const Scaffold(
       backgroundColor: Colors.white,     
-      body:SafeArea(child: AppointmentScreen()  )
+      body:SafeArea(child: Appointmentform()  )
       );
   }
 }

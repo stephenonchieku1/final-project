@@ -104,7 +104,7 @@ class AppointmentDetailListState extends State<AppointmentDetailList> {
                         style: secondaryTextStyle(
                             color:  blackColor)),
                     8.height,
-                    Text('Dr. Stephen Chew',
+                    Text('Dr. Stephen hezbon',
                         style: primaryTextStyle(color: colorDarkBlue)),
                   ],
                 ),
@@ -128,7 +128,7 @@ class AppointmentDetailListState extends State<AppointmentDetailList> {
                         style: secondaryTextStyle(
                             color:  blackColor)),
                     8.height,
-                    Text('Kaixa Pham',
+                    Text('Steve O.',
                         style: primaryTextStyle(color: colorDarkBlue)),
                   ],
                 ),

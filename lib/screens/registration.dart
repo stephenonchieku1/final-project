@@ -23,7 +23,7 @@ class _RegistrationState extends State<Registration> {
               height: MediaQuery.of(context).size.height ,
               width: MediaQuery.of(context).size.width,
               child: Image.asset(
-                "assets/images/img.png",
+                "assets/images/healthlink.png",
                 filterQuality: FilterQuality.high,
                 fit: BoxFit.cover,
               )),

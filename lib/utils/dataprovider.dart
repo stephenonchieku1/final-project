@@ -8,13 +8,12 @@ import 'package:finalproject/models/tophospitaldata.dart';
 import 'package:finalproject/utils/image.dart';
 import 'package:finalproject/models/coviddata.dart';
 import 'package:finalproject/models/delivereddata.dart';
-import 'package:finalproject/models/departmentData.dart';
+import 'package:finalproject/models/departmentdata.dart';
 import 'package:finalproject/models/diseasedata.dart';
 import 'package:finalproject/models/doctordata.dart';
 import 'package:finalproject/models/inboxdata.dart';
 import 'package:finalproject/models/medicationdata.dart';
 import 'package:finalproject/models/newsdata.dart';
-import 'package:finalproject/models/newsvideodata.dart';
 import 'package:finalproject/models/notificationdata.dart';
 import 'package:finalproject/models/ordersucessdata.dart';
 import 'package:finalproject/models/patientdata.dart';
@@ -23,16 +22,10 @@ import 'package:finalproject/models/paymentdata.dart';
 import 'package:finalproject/models/profilecarddata.dart';
 import 'package:finalproject/models/servicedata.dart';
 import 'package:finalproject/models/specialistdata.dart';
-import 'package:finalproject/models/tophospitaldata.dart';
 import 'package:finalproject/models/voucherdata.dart';
 import 'package:finalproject/models/walkthroughdata.dart';
 import 'package:finalproject/utils/string.dart';
-import 'package:finalproject/screens/appointmentscreen.dart';
 import 'package:finalproject/screens/bookappointmentscreen.dart';
-import 'package:finalproject/utils/image.dart';
-import 'package:finalproject/utils/string.dart';
- import 'image.dart';
- import 'string.dart';
 
 
 
@@ -58,7 +51,7 @@ List<MLServicesData> mlServiceDataList() {
   list.add(MLServicesData(
       title: 'Clinic Visit',
       icon: Icons.home_work_outlined,
-      image: ml_ic_dashClinicVisit!,
+      image: ml_ic_dashClinicVisit,
       widget: const MLBookAppointmentScreen(index: 0)));
   list.add(MLServicesData(
       title: 'Home Visit',
@@ -94,7 +87,7 @@ List<MLServicesData> mlServiceDataList() {
 
 List<MLDepartmentData> mlDepartmentDataList() {
   List<MLDepartmentData> list = [];
-  list.add(MLDepartmentData(
+  list.add(MLDepartmentData(//List<MLNotificationData> data = mlNotificationDataList();
       image: ml_ic_department_one,
       title: 'General Care',
       subtitle: '647 Doctor'));
@@ -144,7 +137,7 @@ List<MLTopHospitalData> mlTopHospitalDataList() {
       subtitle: '647 Doctor',
       rating: ''));
   list.add(MLTopHospitalData(
-      image: ml_ic_hospital_one,
+      image: ml_ic_hospital_one,//List<MLNotificationData> data = mlNotificationDataList();
       title: 'General Doctor',
       subtitle: '647 Doctor',
       rating: ''));

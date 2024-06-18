@@ -9,7 +9,7 @@ import 'package:finalproject/router/router.dart';
 import 'package:finalproject/screens/forget_password.dart';
 import 'package:finalproject/screens/registration.dart';
 import 'package:finalproject/screens/trialpage.dart';
-import 'package:finalproject/screens/MLDashboardScreen.dart';
+import 'package:finalproject/screens/dashboardscreen.dart';
 
 final router = GoRouter(routes: [
   GoRoute(
